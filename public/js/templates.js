@@ -5,10 +5,14 @@ var funstuff = '';
 var proj = '';
 var titleembelish = '';
 
-if(location.pathname == '/index') {ind = 'active'; titleembelish = ''; }
-else if(location.pathname == '/about') {abt = 'active'; titleembelish = ' - About';} 
-else if(location.pathname == '/contact') {cont = 'active'; titleembelish = ' - Contact';}
-else if(location.pathname == '/guessthestory') {funstuff = 'active'; titleembelish = ' - FunStuff';}
+//id.substr(id.lastIndexOf('/') + 1);
+
+
+if(location.pathname.substr(location.pathname.lastIndexOf('/') + 1) == 'index') {ind = 'active'; titleembelish = ''; }
+else if (location.pathname.substr(location.pathname.lastIndexOf('/') + 1) == '') { ind = 'active'; titleembelish = ''; }
+else if (location.pathname.substr(location.pathname.lastIndexOf('/') + 1) == 'about') {abt = 'active'; titleembelish = ' - About';} 
+else if (location.pathname.substr(location.pathname.lastIndexOf('/') + 1) == 'contact') {cont = 'active'; titleembelish = ' - Contact';}
+else if (location.pathname.substr(location.pathname.lastIndexOf('/') + 1) == 'guessthestory') {funstuff = 'active'; titleembelish = ' - FunStuff';}
 else {proj = 'active'; titleembelish = ' - Projects';}
 
 jumbotronhtml = `
@@ -41,29 +45,26 @@ navbarhtml = `
           <li class="nav-item `+funstuff+`">
             <a class="nav-link" href="guessthestory">Funstuff</a>
           </li>
-          <li class="nav-item dropdown `+proj+`">
-            <a class="nav-link dropdown-toggle" href="projects" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item `+proj+`">
+            <a class="nav-link" href="projects">Projects</a>
+          </li>
+          <!--<li class="nav-item dropdown `+proj+`">
+            <a class="nav-link dropdown-toggle" href="/projects.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Projects
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="projects">All Projects</a>
+              <a class="dropdown-item" href="/projects.html">All Projects</a>
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
-          </li>
+          </li>-->
         </ul>
         <!--<form class="form-inline my-2 my-md-0">
           <input class="form-control" type="text" placeholder="Search" aria-label="Search">
         </form>-->
       </div>
     </div>
-  </nav>
-  <script>
-        $(".nav-item li").click(function() {
-            $(".nav-item li").removeClass('active');
-            $(this).addClass('active');
-        });
-  </script>`
+  </nav>`
     
 contactformhtml = `
 <form class="needs-validation" method="POST" action="https://formspree.io/jd4rider@gmail.com" novalidate>
@@ -144,6 +145,8 @@ contactformhtml = `
 $("navbar").html(navbarhtml);
 $("contactform").html(contactformhtml);
 $("jumbotron").html(jumbotronhtml);
+//$("projects").html(projectshtml);
+
 
 function telephoneCheck(str) {
   //var x = document.getElementById('phone').value;
