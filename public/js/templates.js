@@ -26,7 +26,7 @@ jumbotronhtml = `
 navbarhtml = `
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index"><img class="grow" src="images/me.jpeg" width=auto height="32"></a>
+      <a class="navbar-brand" href="/"><img class="grow" src="images/me.jpeg" width=auto height="32"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,7 +34,7 @@ navbarhtml = `
       <div class="collapse navbar-collapse" id="navbarsExample07">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item `+ind+`" >
-            <a class="nav-link" href="index">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item `+abt+`">
             <a class="nav-link" href="about">About</a>

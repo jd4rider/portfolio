@@ -15,7 +15,7 @@ var projects =
             'BlocklyTurtle10Screen1.png',
             'BlocklyTurtle10Screen2.png'
         ],
-        'link': ''
+        'link': '#'
     },
     'Scratch-Basketball':
     {
@@ -86,7 +86,7 @@ var projects =
         'pictures': [
             'HTML_screen.png'
         ],
-        'link': 'index.html'
+        'link': '/'
         
     },
     'HTML_and_CSS':
@@ -96,7 +96,7 @@ var projects =
         'pictures': [
             'HTML_and_CSS_screen.png'
         ],
-        'link': 'contact.html'
+        'link': 'contact'
         
     },    
     'HTML_and_JS':
@@ -106,7 +106,7 @@ var projects =
         'pictures': [
             'HTML_and_JS_screen.png'
         ],
-        'link': 'contact.html'
+        'link': 'contact'
         
     },    
     'Processing':
